@@ -1,0 +1,9 @@
+order_id,customer_id,product,quantity,unit_price,region
+1001,C001,Notebook,2,3500.00,Sudeste
+1002,C002,Mouse,10,45.50,Sul
+1003,C003,Teclado,5,120.00,Nordeste
+1004,C001,Monitor,1,980.00,Sudeste
+1005,C004,Headset,3,250.00,Centro-Oeste
+1006,C002,Notebook,1,4200.00,Sul
+1007,C005,Mouse,8,39.90,Norte
+1008,C003,Cadeira,2,890.00,Nordeste

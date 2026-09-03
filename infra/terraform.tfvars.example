@@ -1,0 +1,28 @@
+# Copie este arquivo para terraform.tfvars e ajuste o que for local.
+# Não versione terraform.tfvars se ele contiver segredos.
+
+image_name     = "ex2-dataops"
+image_tag      = "v1"
+container_name = "ex2-dataops-pipeline"
+network_name   = "ex2-dataops-net"
+volume_name    = "ex2-dataops-output"
+environment    = "lab"
+
+# Deixe docker_host comentado para o provider usar DOCKER_HOST / default.
+# Se terraform apply não encontrar o daemon, descomente a linha adequada.
+
+# Linux:
+# docker_host = "unix:///var/run/docker.sock"
+
+# macOS (Docker Desktop):
+# docker_host = "unix:///Users/SEU_USUARIO/.docker/run/docker.sock"
+
+# Windows (Docker Desktop):
+# docker_host = "npipe:////./pipe/docker_engine"
+
+input_path  = "data/input/sample.csv"
+output_path = "data/output/orders_transformed.csv"
+api_url     = "http://localhost:8080"
+
+# Deixe vazio no exemplo. Preencha apenas no terraform.tfvars local.
+api_key = ""

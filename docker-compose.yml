@@ -1,0 +1,15 @@
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ex2-dataops:${IMAGE_TAG:-v1}
+    environment:
+      INPUT_PATH: ${INPUT_PATH:-data/input/sample.csv}
+      OUTPUT_PATH: ${OUTPUT_PATH:-data/output/orders_transformed.csv}
+      ENVIRONMENT: ${ENVIRONMENT:-dev}
+      API_URL: ${API_URL:-http://localhost:8080}
+      API_KEY: ${API_KEY:-}
+    volumes:
+      - ./data:/app/data
+    restart: "no"
